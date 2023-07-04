@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'RESPONSIVE-SIDE-BAR';
+  title = 'MYHEALTHCOP';
 
   ngOnInit(){
     let arrow = document.querySelectorAll(".arrow");
