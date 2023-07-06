@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { ApexOptions } from 'apexcharts';
 
 // @ts-ignore
@@ -9,9 +9,10 @@ import ApexCharts from 'apexcharts';
   templateUrl: './second-c.component.html',
   styleUrls: ['./second-c.component.css']
 })
-export class SECONDCComponent implements AfterViewInit,OnInit {
-
-  constructor() { }
+export class SECONDCComponent implements AfterViewInit,OnInit,OnDestroy {
+  ngOnDestroy(): void {
+    throw new Error('Method not implemented.');
+  }
 
   chartOptions!: ApexOptions;
   ngOnInit() {
@@ -21,10 +22,12 @@ export class SECONDCComponent implements AfterViewInit,OnInit {
         type: 'donut',
       },
       labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5'],
+
       plotOptions: {
         pie: {
           donut: {
             size: '70%',
+            
           },
         },
       },
@@ -36,20 +39,25 @@ export class SECONDCComponent implements AfterViewInit,OnInit {
       series: [
         {
           name: 'Feb',
-          data: [12000, 15000, 14889, 19000, 20000, 18779, 23550]
+          data: ['12K', '15K', '14K', '19K', '20K', '18K', '23K']
         }
       ],
       chart: {
         type: 'line',
         height: 350,
-        innerWidth:400
+        innerWidth:400,
+        toolbar:{
+          show:false
+        }
       },
       xaxis: {
         categories: ['01', '02', '03', '04', '05', '06', '07']
       }
     };
 
-    const chart = new ApexCharts(document.querySelector('#chart'), options);
+    const chart = new ApexCharts(document.querySelector('.chart2'), options);
     chart.render();
+
   }
+
 }
