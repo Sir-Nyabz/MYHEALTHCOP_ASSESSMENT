@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgApexchartsModule } from "ng-apexcharts";
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -26,7 +27,7 @@ import { EIGHTHCComponent } from './eighth-c/eighth-c.component';
     EIGHTHCComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, NgApexchartsModule,
     AppRoutingModule
     
   ],

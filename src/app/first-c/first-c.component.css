@@ -1,3 +1,39 @@
-.row .card{
+.card{
     display: inline-block;
 }
+
+.chart1a{
+    width: 40%;
+    height:500px;
+}
+
+.chart1b{
+    width: 50%;
+    float: right;
+    height: 500px;
+}
+
+.divided {
+    display: flex;
+    align-items: center;
+  }
+  
+  .divider {
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    margin: 5px
+  }
+
+  .chart1b{
+    display: inline-block;
+  }
+
+  #chartdiv1b{
+    float: right;
+    width: 35%;
+    background-color: rgb(53, 151, 151);
+  }
+
+  .first{
+    width: 35%;
+  }

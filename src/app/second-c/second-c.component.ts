@@ -9,11 +9,8 @@ import ApexCharts from 'apexcharts';
   templateUrl: './second-c.component.html',
   styleUrls: ['./second-c.component.css']
 })
-export class SECONDCComponent implements AfterViewInit,OnInit,OnDestroy {
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
-
+export class SECONDCComponent implements AfterViewInit,OnInit {
+  
   chartOptions!: ApexOptions;
   ngOnInit() {
     this.chartOptions = {
@@ -26,8 +23,7 @@ export class SECONDCComponent implements AfterViewInit,OnInit,OnDestroy {
       plotOptions: {
         pie: {
           donut: {
-            size: '70%',
-            
+            size: '70%'
           },
         },
       },
@@ -49,6 +45,9 @@ export class SECONDCComponent implements AfterViewInit,OnInit,OnDestroy {
         toolbar:{
           show:false
         }
+      },
+      stroke: {
+        dashArray: [0,2]
       },
       xaxis: {
         categories: ['01', '02', '03', '04', '05', '06', '07']
