@@ -5,6 +5,7 @@
 
   .card{
     display: inline-block;
+    margin: 0px 15px 0px 0px;
 }
 
 .divided {
@@ -17,3 +18,14 @@
     border-bottom: 1px solid black;
     margin: 5px
   }
+
+  .chart1a{
+    width: 40%;
+    height:500px;
+}
+
+.chart1b{
+    width: 50%;
+    float: right;
+    height: 500px;
+}

@@ -49,12 +49,28 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
     const options = {
       series: [
         {
-          name: 'Feb',
+          name: 'Direct',
           data: ['12K', '15K', '14K', '19K', '20K', '18K', '23K']
         },
         {
-          name: 'Mar',
+          name: 'Organic Search',
           data: ['10K', '13K', '16K', '18K', '19K', '17K', '24K'],
+        },
+        {
+          name: 'Social',
+          data: ['20K', '18K', '19K', '22K', '18K', '16K', '22K'],
+        },
+        {
+          name: 'Referral',
+          data: ['13K', '14K', '17K', '21K', '17K', '23K', '21K'],
+        },
+        {
+          name: 'Other',
+          data: ['18K', '20K', '21K', '20K', '16K', '15K', '20K'],
+        },
+        {
+          name:'',
+          data: ['16K', '14K', '15K', '17K', '15K', '14K', '18K'],
         }
       ],
       chart: {
@@ -66,7 +82,7 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
         }
       },
       stroke: {
-        dashArray: [0,2]
+        dashArray: [0]
       },
       xaxis: {
         categories: ['01', '02', '03', '04', '05', '06', '07']
