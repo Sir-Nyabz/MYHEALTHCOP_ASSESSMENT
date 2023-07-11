@@ -23,7 +23,7 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
       labels: ['Active Now', 'Pending', 'Reported', 'Invited', 'Suspended', 'Banned'],
       chart: {
         type: 'pie',
-        width: 560,
+        width: 360,
         show:false
       },
       responsive: [
