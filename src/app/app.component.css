@@ -1,4 +1,4 @@
-.card{
+.top-card{
     display: inline-block;
     margin: 0px 15px 20px 0px;
 }
@@ -13,6 +13,10 @@ h4{
 }
 
 .home-section{
-    margin-left: 30px;
-    padding-left: 30px;
+    margin-left: 20px;
+    padding-left: 20px;
 }
+
+.collapse-icon::after {
+    transform: rotate(180deg);
+  }

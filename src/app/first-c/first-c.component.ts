@@ -19,12 +19,17 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
 
   ngOnInit(): void {
     const options = {
+      dataLabels:{
+        enabled:false
+      },
+      
       series: [800000, 115000, 101000, 115000, 40000,20000],
       labels: ['Active Now', 'Pending', 'Reported', 'Invited', 'Suspended', 'Banned'],
+      text:['800K', '115K', '101K', '115K', '40K', '20K'],
       chart: {
         type: 'pie',
-        width: 360,
-        show:false
+        width: 450,
+        //show:false
       },
       responsive: [
         {
@@ -33,9 +38,6 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
             chart: {
               width: 600,
               innerHeight:700
-            },
-            legend: {
-              position: 'bottom'
             }
           }
         }
@@ -44,6 +46,9 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
 
     const chart = new ApexCharts(document.querySelector('#chartdiv1a'), options);
     chart.render();
+    
+    
+
 
     
   }

@@ -14,6 +14,9 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     const options = {
+      dataLabels:{
+        enabled:false
+      },
       series: [78, 14, 8],
       labels: ['Mobile', 'Desktop', 'Tablet'],
       legend: {
@@ -47,6 +50,7 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     const options = {
+      
       series: [
         {
           name: 'Direct',

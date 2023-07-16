@@ -17,6 +17,7 @@ export class SECONDCComponent implements AfterViewInit,OnInit {
       series: [44, 55, 41, 17, 15],
       chart: {
         type: 'donut',
+        height: 350
       },
       labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5'],
 
@@ -54,8 +55,32 @@ export class SECONDCComponent implements AfterViewInit,OnInit {
       }
     };
 
-    const chart = new ApexCharts(document.querySelector('.chart2'), options);
-    chart.render();
+    const chart1 = new ApexCharts(document.querySelector('.chart2'), options);
+    chart1.render();
+
+
+    this.chartOptions = {
+      dataLabels:{
+        enabled:false
+      },
+      series: [44, 55, 41, 17, 15],
+      chart: {
+        type: 'donut',
+        height: 350
+      },
+      labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5'],
+
+      plotOptions: {
+        pie: {
+          donut: {
+            size: '70%'
+          },
+        },
+      },
+    };
+
+    const chart2 = new ApexCharts(document.querySelector('.chart2b'), this.chartOptions);
+    chart2.render();
 
   }
 

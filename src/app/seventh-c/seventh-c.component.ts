@@ -12,6 +12,9 @@ export class SEVENTHCComponent implements OnInit,AfterViewInit {
   constructor() { }
   ngOnInit(): void {
     const options = {
+      dataLabels:{
+        enabled:false
+      },
       series: [351, 284, 199],
       labels: ['Classes', 'Programs', 'Events'],
       chart: {

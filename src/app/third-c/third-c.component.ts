@@ -17,6 +17,9 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     const options = {
+      dataLabels:{
+        enabled:false
+      },
       series: [351, 284, 199],
       labels: ['Classes', 'Programs', 'Events'],
       chart: {

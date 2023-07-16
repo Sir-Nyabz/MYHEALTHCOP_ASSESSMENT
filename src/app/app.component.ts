@@ -16,7 +16,7 @@ export class AppComponent{
   ngOnInit(){
     let arrow = document.querySelectorAll(".arrow");
     let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn= document.querySelector(".bi-window");
+    let sidebarBtn= document.querySelector(".collapse-icon");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e:any)=>{
      let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
