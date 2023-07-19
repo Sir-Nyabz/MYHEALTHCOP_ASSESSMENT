@@ -24,7 +24,7 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
       labels: ['Classes', 'Programs', 'Events'],
       chart: {
         type: 'pie',
-        width: 380
+        width: 450
       },
       responsive: [
         {

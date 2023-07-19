@@ -24,11 +24,13 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
       },
       chart: {
         type: 'pie',
-        width: 380
+        width: 450,
+        align:'center',
+        position:'center'
       },
       responsive: [
         {
-          breakpoint: 480,
+          breakpoint: 40,
           options: {
             chart: {
               width: 300
@@ -45,6 +47,7 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
     };
 
     const chart = new ApexCharts(document.querySelector('.chart8a'), options);
+    
     chart.render();
   }
 

@@ -37,7 +37,7 @@ export class FOURTHCComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     const xValues = ["Fitness", "Running", "Tennis", "Aerobics", "Swimming"];
-    const yValues = [55, 49, 44, 24, 15];
+    const yValues = [55, 49, 44, 24, 10];
     const barColors = ["yellow", "yellow", "yellow", "yellow", "yellow"];
 
     const myChart = new Chart('myChart', {

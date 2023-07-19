@@ -63,12 +63,16 @@ export class SECONDCComponent implements AfterViewInit,OnInit {
       dataLabels:{
         enabled:false
       },
-      series: [44, 55, 41, 17, 15],
+      legend: {
+        position: 'bottom'
+      },
+      series: [54.5, 45.5],
       chart: {
         type: 'donut',
-        height: 350
+        height: 350,
+        width:450
       },
-      labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5'],
+      labels: ['Male 54.5%', 'Female 45.5%'],
 
       plotOptions: {
         pie: {

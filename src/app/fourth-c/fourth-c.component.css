@@ -5,12 +5,13 @@
 
   .card{
     display: inline-block;
-    margin: 0px 15px 0px 0px;
+    margin: 0% 2% 0px 0px;
 }
 
 .divided {
     display: flex;
     align-items: center;
+    padding: 10px;
   }
   
   .divider {
@@ -20,12 +21,18 @@
   }
 
   .chart1a{
-    width: 40%;
-    height:500px;
+    width: 59%;
+    height:450px;
+    padding-top: 20px;
 }
 
 .chart1b{
-    width: 50%;
+    width: 34%;
     float: right;
-    height: 500px;
+    height: 450px;
+    padding-top: 20px;
+}
+
+.row{
+  margin-top: 20px;
 }

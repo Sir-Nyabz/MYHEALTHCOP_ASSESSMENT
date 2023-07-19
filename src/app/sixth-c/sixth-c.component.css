@@ -1,11 +1,8 @@
-#chart {
-    max-width: 650px;
-    margin: 35px auto;
-  }
+
 
   .card{
     display: inline-block;
-    margin: 0px 15px 0px 0px;
+    margin: 0% 2% 0px 0px;
 }
 
 .divided {
@@ -21,12 +18,18 @@
   }
 
   .chart1a{
-    width: 40%;
-    height:500px;
+    width: 64%;
+    height:450px;
+    padding-top: 20px;
 }
 
 .chart1b{
-    width: 50%;
+    width: 29%;
     float: right;
-    height: 500px;
+    height: 450px;
+    padding-top: 20px;
+}
+
+.home-content{
+  margin-top: 20px;
 }
