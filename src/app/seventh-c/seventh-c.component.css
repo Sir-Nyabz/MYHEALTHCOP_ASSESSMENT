@@ -1,21 +1,39 @@
 .card{
     display: inline-block;
     margin: 0% 2% 0px 0px;
+    
 }
 
 .chart1b{
-    width: 50%;
+    width: 55%;
     float: right;
     height: 450px;
-    padding-top: 20px;
+    padding-top: 2%;
 }
 
 .chart1a{
-    width: 40%;
+    width: 35%;
     height: 450px;
-    padding-top: 20px;
+    padding-top: 2%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
 
 .row{
     margin-top: 20px;
+}
+
+img.retire{
+    height: 40%;
+    width: 45%;
+    margin: 4% 0% 4% 0%;
+}
+
+.donations{
+    font-size: 25px;
+}
+
+h2{
+    font-size: 40px;
 }

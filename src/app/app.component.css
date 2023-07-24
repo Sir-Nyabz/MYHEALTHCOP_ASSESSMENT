@@ -16,5 +16,68 @@ i.bi-chevron-left{
   }
 
   .Corporative{
+    color: rgb(62, 128, 213);
+    text-align: center;
+  }
+
+  .percentage{
     color: aquamarine;
+  }
+
+  a.create_report{
+    margin-right: 30px;
+    display: block;
+    border-radius: 5px;
+    float: right;
+    text-decoration: none;
+    background-color: rgb(16, 145, 225);
+    padding: 10px;
+    color: white;
+  }
+
+  a.create_report:hover {
+    background-color:rgb(79, 147, 190);
+  }
+
+  .dash{
+    padding: 15px 0px 15px 0px;
+
+  }
+
+  .text{
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  .precedent{
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  table{
+    
+    margin: 0px 40px 0px 40px;
+    text-align: center;
+  }
+
+  .mnth{
+    padding: 0px 25px 0px 25px;
+  }
+
+  .mnt{
+    padding-right: 25px;
+  }
+
+  th{
+    font-weight: 100;
+    text-align: center;
+  }
+
+  td{
+    text-align: center;
+  }
+
+  img.medal{
+    width: 30px;
+    height: 30px;
   }

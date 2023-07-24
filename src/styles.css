@@ -71,14 +71,6 @@ body {
   overflow: visible;
 }
 
-/* a.link_name:hover{
-  background: #E4E9F7;
-}
-
-span.link_name:hover{
-  background: #E4E9F7;
-} */
-
 li.item.icon-link.link_name.bi:hover{
   background: #E4E9F7;
 }
