@@ -80,4 +80,20 @@ i.bi-chevron-left{
   img.medal{
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    background-color: rgb(244, 151, 11);
+  }
+
+  img.user{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgb(79, 147, 190);
+  }
+
+  img.bank{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: blueviolet;
   }
