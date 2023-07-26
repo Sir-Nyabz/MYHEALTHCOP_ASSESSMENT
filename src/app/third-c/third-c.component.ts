@@ -1,4 +1,8 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import * as am4core from '@amcharts/amcharts4/core';
+import * as am4maps from '@amcharts/amcharts4/maps';
+import am4geodata_ghanaLow from '@amcharts/amcharts4-geodata/ghanaLow';
+import * as am4charts from "@amcharts/amcharts4/charts";
 // @ts-ignore
 import ApexCharts from 'apexcharts';
 
@@ -26,20 +30,13 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
         type: 'pie',
         width: 450
       },
+      legend: {
+        width:100,
+        height:400,
+      },
       responsive: [
         {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 300
-            },
-            legend: {
-              position: 'bottom'
-            },
-            percentage:{
-              show:false
-            }
-          }
+          breakpoint: undefined,
         }
       ]
     };
@@ -78,6 +75,40 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
 
     const chart = new ApexCharts(document.querySelector('.chart3b'), options);
     chart.render();
+  
+  
+  
+  
+  
+      // Create chart instance
+      const chart1 = am4core.create('chartdiv1', am4charts.PieChart);
+  
+      // Add data
+      chart1.data = [
+        {
+          country: 'Classes',
+          litres: 351
+        },
+        {
+          country: 'Programs',
+          litres: 284
+        },
+        {
+          country: 'Events',
+          litres: 199
+        }
+      ];
+  
+      // Add and configure Series
+      const pieSeries = chart1.series.push(new am4charts.PieSeries());
+      pieSeries.dataFields.value = 'litres';
+      pieSeries.dataFields.category = 'country';
+      pieSeries.ticks.template.disabled = true;
+  pieSeries.alignLabels = false;
+  pieSeries.labels.template.text = "";
+  pieSeries.labels.template.radius = am4core.percent(-40);
+  pieSeries.labels.template.fill = am4core.color("white");
+    
 
   }
 

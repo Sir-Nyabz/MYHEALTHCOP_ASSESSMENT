@@ -78,6 +78,7 @@ i.bi-chevron-left{
   }
 
   img.medal{
+    vertical-align: middle;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -85,6 +86,7 @@ i.bi-chevron-left{
   }
 
   img.user{
+    vertical-align: middle;
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -92,8 +94,17 @@ i.bi-chevron-left{
   }
 
   img.bank{
+    vertical-align: middle;
     height: 30px;
     width: 30px;
     border-radius: 50%;
     background-color: blueviolet;
+  }
+
+  .percentage .precedent{
+    text-align: left;
+  }
+
+  .last_week{
+    text-align: left;
   }

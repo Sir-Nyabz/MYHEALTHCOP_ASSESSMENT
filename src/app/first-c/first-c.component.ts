@@ -22,7 +22,9 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
       dataLabels:{
         enabled:false
       },
-      
+      legend: {
+        height:350,
+      },
       series: [800000, 115000, 101000, 115000, 40000,20000],
       labels: ['Active Now', 'Pending', 'Reported', 'Invited', 'Suspended', 'Banned'],
       text:['800K', '115K', '101K', '115K', '40K', '20K'],
