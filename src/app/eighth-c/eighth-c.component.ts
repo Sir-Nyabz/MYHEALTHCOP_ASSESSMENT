@@ -1,4 +1,7 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import * as am4core from '@amcharts/amcharts4/core';
+import * as am4maps from '@amcharts/amcharts4/maps';
+import * as am4charts from "@amcharts/amcharts4/charts";
 // @ts-ignore
 import ApexCharts from 'apexcharts';
 
@@ -13,43 +16,8 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    const options = {
-      dataLabels:{
-        enabled:false
-      },
-      series: [78, 14, 8],
-      labels: ['Mobile', 'Desktop', 'Tablet'],
-      legend: {
-        position: 'bottom'
-      },
-      chart: {
-        type: 'pie',
-        width: 450,
-        align:'center',
-        position:'center'
-      },
-      responsive: [
-        {
-          breakpoint: 40,
-          options: {
-            chart: {
-              width: 300
-            },
-            legend: {
-              position: 'bottom'
-            },
-            percentage:{
-              show:false
-            }
-          }
         }
-      ]
-    };
-
-    const chart = new ApexCharts(document.querySelector('.chart8a'), options);
     
-    chart.render();
-  }
 
   ngAfterViewInit() {
     const options = {
@@ -99,6 +67,38 @@ export class EIGHTHCComponent implements OnInit, AfterViewInit {
     const chart = new ApexCharts(document.querySelector('.chart8b'), options);
     chart.render();
 
+
+    //PIE CHART
+      // Create chart instance
+      const chart1 = am4core.create('chartdiv8', am4charts.PieChart);
+  
+      // Add data
+      chart1.data = [
+        {
+          country: 'Mobile',
+          litres: 78
+        },
+        {
+          country: 'Desktop',
+          litres: 14
+        },
+        {
+          country: 'Tablet',
+          litres: 8
+        }
+      ];
+  
+      // Add and configure Series
+      const pieSeries = chart1.series.push(new am4charts.PieSeries());
+      pieSeries.dataFields.value = 'litres';
+      pieSeries.dataFields.category = 'country';
+      pieSeries.ticks.template.disabled = true;
+  pieSeries.alignLabels = false;
+  pieSeries.labels.template.text = "";
+  pieSeries.labels.template.radius = am4core.percent(-40);
+  pieSeries.labels.template.fill = am4core.color("white");
+    
+  chart1.legend = new am4charts.Legend();
   }
 
 }

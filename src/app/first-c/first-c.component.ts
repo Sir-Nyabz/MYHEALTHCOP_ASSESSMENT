@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4geodata_ghanaLow from '@amcharts/amcharts4-geodata/ghanaLow';
+import * as am4charts from "@amcharts/amcharts4/charts";
 import { gahanaMapData } from './dummy-data/ghana-map-data';
 // @ts-ignore
 import ApexCharts from 'apexcharts';
@@ -17,46 +18,58 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    const options = {
-      dataLabels:{
-        enabled:false
-      },
-      legend: {
-        height:350,
-      },
-      series: [800000, 115000, 101000, 115000, 40000,20000],
-      labels: ['Active Now', 'Pending', 'Reported', 'Invited', 'Suspended', 'Banned'],
-      text:['800K', '115K', '101K', '115K', '40K', '20K'],
-      chart: {
-        type: 'pie',
-        width: 450,
-        //show:false
-      },
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 600,
-              innerHeight:700
-            }
-          }
-        }
-      ]
-    };
-
-    const chart = new ApexCharts(document.querySelector('#chartdiv1a'), options);
-    chart.render();
-    
-    
-
-
-    
+  ngOnInit(): void {    
   }
 
 
   ngAfterViewInit() {
+      //PIE CHART
+      // Create chart instance
+      const chart1 = am4core.create('chartdiv1a', am4charts.PieChart);
+  
+      // Add data
+      chart1.data = [
+        {
+          country: 'Active',
+          litres: 800000
+        },
+        {
+          country: 'Pending',
+          litres: 115000
+        },
+        {
+          country: 'Reported',
+          litres: 101000
+        },
+        {
+          country: 'Invited',
+          litres: 115000
+        },
+        {
+          country: 'Suspended',
+          litres: 40000
+        },
+        {
+          country: 'Banned',
+          litres: 20000
+        }
+      ];
+  
+      // Add and configure Series
+      const pieSeries = chart1.series.push(new am4charts.PieSeries());
+      pieSeries.dataFields.value = 'litres';
+      pieSeries.dataFields.category = 'country';
+      pieSeries.ticks.template.disabled = true;
+  pieSeries.alignLabels = false;
+  pieSeries.labels.template.text = "";
+  pieSeries.labels.template.radius = am4core.percent(-40);
+  pieSeries.labels.template.fill = am4core.color("white");
+  
+  chart1.legend = new am4charts.Legend();
+  chart1.legend.position = "right";
+
+
+    //GHANA MAP
     const chart = am4core.create('chartdiv1b', am4maps.MapChart);
 
     // Set map definition
@@ -87,8 +100,8 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
     polygonSeries.heatRules.push({
       "property": "fill",
       "target": polygonSeries.mapPolygons.template,
-      "min": am4core.color("#19105e"),
-      "max": am4core.color("#554d8c"),
+      "min": am4core.color("#e5e6f6"),
+      "max": am4core.color("#080c64"),
       "logarithmic": true
     });
 

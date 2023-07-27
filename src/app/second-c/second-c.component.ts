@@ -1,5 +1,8 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { ApexOptions } from 'apexcharts';
+import * as am4core from '@amcharts/amcharts4/core';
+import * as am4maps from '@amcharts/amcharts4/maps';
+import am4geodata_ghanaLow from '@amcharts/amcharts4-geodata/ghanaLow';
+import * as am4charts from "@amcharts/amcharts4/charts";
 
 // @ts-ignore
 import ApexCharts from 'apexcharts';
@@ -9,28 +12,9 @@ import ApexCharts from 'apexcharts';
   templateUrl: './second-c.component.html',
   styleUrls: ['./second-c.component.css']
 })
-export class SECONDCComponent implements AfterViewInit,OnInit {
+export class SECONDCComponent implements AfterViewInit {
   
-  chartOptions!: ApexOptions;
-  ngOnInit() {
-    this.chartOptions = {
-      series: [44, 55, 41, 17, 15],
-      chart: {
-        type: 'donut',
-        height: 350
-      },
-      labels: ['Series 1', 'Series 2', 'Series 3', 'Series 4', 'Series 5'],
-
-      plotOptions: {
-        pie: {
-          donut: {
-            size: '70%'
-          },
-        },
-      },
-    };
-  }
-
+  
   ngAfterViewInit() {
     const options = {
       series: [
@@ -59,33 +43,38 @@ export class SECONDCComponent implements AfterViewInit,OnInit {
     chart1.render();
 
 
-    this.chartOptions = {
-      dataLabels:{
-        enabled:false
-      },
-      legend: {
-        position: 'bottom'
-      },
-      series: [54.5, 45.5],
-      chart: {
-        type: 'donut',
-        height: 350,
-        width:450
-      },
-      labels: ['Male 54.5%', 'Female 45.5%'],
+    
 
-      plotOptions: {
-        pie: {
-          donut: {
-            size: '70%'
-          },
+//donut
+    //PIE CHART
+      // Create chart instance
+      const chart = am4core.create('donut1', am4charts.PieChart);
+  
+      // Add data
+      chart.data = [
+        {
+          country: 'Male',
+          litres: 54.5
         },
-      },
-    };
-
-    const chart2 = new ApexCharts(document.querySelector('.chart2b'), this.chartOptions);
-    chart2.render();
-
+        {
+          country: 'Female',
+          litres: 45.5
+        }
+      ];
+  
+      // Add and configure Series
+      const pieSeries = chart.series.push(new am4charts.PieSeries());
+      pieSeries.dataFields.value = 'litres';
+      pieSeries.dataFields.category = 'country';
+      pieSeries.ticks.template.disabled = true;
+  pieSeries.alignLabels = false;
+  pieSeries.labels.template.text = "";
+  pieSeries.labels.template.radius = am4core.percent(-40);
+  pieSeries.labels.template.fill = am4core.color("white");
+  
+  chart.legend = new am4charts.Legend();
+  //chart.legend.position = "";
+  chart.innerRadius = am4core.percent(50);
   }
 
 }

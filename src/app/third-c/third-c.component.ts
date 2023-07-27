@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
-import am4geodata_ghanaLow from '@amcharts/amcharts4-geodata/ghanaLow';
 import * as am4charts from "@amcharts/amcharts4/charts";
 // @ts-ignore
 import ApexCharts from 'apexcharts';
@@ -20,29 +19,6 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit(): void {
-    const options = {
-      dataLabels:{
-        enabled:false
-      },
-      series: [351, 284, 199],
-      labels: ['Classes', 'Programs', 'Events'],
-      chart: {
-        type: 'pie',
-        width: 450
-      },
-      legend: {
-        width:100,
-        height:400,
-      },
-      responsive: [
-        {
-          breakpoint: undefined,
-        }
-      ]
-    };
-
-    const chart = new ApexCharts(document.querySelector('.chart3a'), options);
-    chart.render();
   }
 
   ngAfterViewInit() {
@@ -79,7 +55,7 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
   
   
   
-  
+  //PIE CHART
       // Create chart instance
       const chart1 = am4core.create('chartdiv1', am4charts.PieChart);
   
@@ -109,7 +85,7 @@ export class THIRDCComponent implements OnInit, AfterViewInit {
   pieSeries.labels.template.radius = am4core.percent(-40);
   pieSeries.labels.template.fill = am4core.color("white");
     
-
+  chart1.legend = new am4charts.Legend();
   }
 
 }

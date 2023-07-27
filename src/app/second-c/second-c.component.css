@@ -19,3 +19,8 @@
 .chart2b{
     align-self: center;
 }
+
+#donut1 {
+    width: 100%;
+    height: 400px;
+  }
