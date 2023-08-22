@@ -1,6 +1,7 @@
 .top-card{
     display: inline-block;
     margin: 0px 15px 20px 0px;
+    width: 19%;
 }
 
 i.bi-chevron-left{
