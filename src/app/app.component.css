@@ -1,111 +1,108 @@
-.top-card{
-    display: inline-block;
-    margin: 0px 15px 20px 0px;
-    width: 19%;
+.top-card {
+  display: inline-block;
+  margin: 0px 1% 2% 0px;
+  width: 21%;
+  height: 106.4px;
 }
 
-i.bi-chevron-left{
-    float: right;
+.lastCard {
+  width: 33%;
+  height: 106.4px;
 }
 
-.home-section{
-    padding-left: 1.5%;
+i.bi-chevron-left {
+  float: right;
+}
+
+.home-section {
+  padding-left: 2%;
 }
 
 .collapse-icon::after {
-    transform: rotate(180deg);
-  }
+  transform: rotate(180deg);
+}
 
-  .Corporative{
-    color: rgb(62, 128, 213);
-    text-align: center;
-  }
+.Corporative {
+  color: rgb(62, 128, 213);
+  text-align: center;
+}
 
-  .percentage{
-    color: aquamarine;
-  }
+.percentage {
+  color: aquamarine;
+}
 
-  a.create_report{
-    margin-right: 30px;
-    display: block;
-    border-radius: 5px;
-    float: right;
-    text-decoration: none;
-    background-color: rgb(16, 145, 225);
-    padding: 10px;
-    color: white;
-  }
+a.create_report {
+  margin-right: 30px;
+  display: block;
+  border-radius: 5px;
+  float: right;
+  text-decoration: none;
+  background-color: rgb(16, 145, 225);
+  padding: 10px;
+  color: white;
+}
 
-  a.create_report:hover {
-    background-color:rgb(79, 147, 190);
-  }
+a.create_report:hover {
+  background-color: rgb(79, 147, 190);
+}
 
-  .dash{
-    padding: 15px 0px 15px 0px;
+.text {
+  font-weight: 900;
+  font-size: 30px;
+}
 
-  }
+.precedent {
+  font-weight: 700;
+  font-size: 20px;
+}
 
-  .text{
-    font-weight: 900;
-    font-size: 30px;
-  }
+table {
+  margin: 0px 40px 0px 40px;
+  text-align: center;
+}
 
-  .precedent{
-    font-weight: 700;
-    font-size: 20px;
-  }
+.mnth {
+  padding: 0px 25px 0px 25px;
+}
 
-  table{
-    
-    margin: 0px 40px 0px 40px;
-    text-align: center;
-  }
+.mnt {
+  padding-right: 25px;
+}
 
-  .mnth{
-    padding: 0px 25px 0px 25px;
-  }
+th {
+  font-weight: 100;
+  text-align: center;
+}
 
-  .mnt{
-    padding-right: 25px;
-  }
+td {
+  text-align: center;
+}
 
-  th{
-    font-weight: 100;
-    text-align: center;
-  }
+img.medal {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(244, 151, 11);
+}
 
-  td{
-    text-align: center;
-  }
+img.user {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: rgb(79, 147, 190);
+}
 
-  img.medal{
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: rgb(244, 151, 11);
-  }
+img.bank {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
 
-  img.user{
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: rgb(79, 147, 190);
-  }
+.percentage .precedent {
+  text-align: left;
+}
 
-  img.bank{
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background-color: blueviolet;
-  }
-
-  .percentage .precedent{
-    text-align: left;
-  }
-
-  .last_week{
-    text-align: left;
-  }
+.last_week {
+  text-align: left;
+}

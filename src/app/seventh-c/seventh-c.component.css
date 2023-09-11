@@ -1,18 +1,17 @@
 .card{
     display: inline-block;
-    margin: 0% 2% 0px 0px;
-    
+    margin: 0% 1% 0px 0px;
 }
 
 .chart1b{
-    width: 55%;
+    width: 62%;
     float: right;
     height: 450px;
     padding-top: 2%;
 }
 
 .chart1a{
-    width: 35%;
+    width: 36%;
     height: 450px;
     padding-top: 2%;
     align-items: center;
@@ -37,3 +36,9 @@ img.retire{
 h2{
     font-size: 40px;
 }
+
+@media only screen and (max-width: 600px) {
+    .card {
+        background: #000;
+    }
+  }

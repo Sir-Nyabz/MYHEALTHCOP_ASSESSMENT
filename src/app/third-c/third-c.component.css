@@ -1,6 +1,6 @@
 .card{
     display: inline-block;
-    margin: 0% 2% 0px 0px;
+    margin: 0% 1% 0px 0px;
 }
 
 .chart1a{
@@ -12,7 +12,7 @@
 
 
 .chart1b{
-    width: 50%;
+    width: 58%;
     float: right;
     height: 450px;
     padding-top: 20px;

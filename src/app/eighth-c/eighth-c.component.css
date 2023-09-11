@@ -1,16 +1,16 @@
 .card{
     display: inline-block;
-    margin: 0% 2% 2% 0px;
+    margin: 0% 1% 0px 0px;
 }
 
 .chart1a{
-    width: 64%;
+    width: 66%;
     height:450px;
     padding-top: 20px;
 }
 
 .chart1b{
-    width: 29%;
+    width: 32%;
     float: right;
     height: 450px;
     padding-top: 20px;

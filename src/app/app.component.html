@@ -1,275 +1,283 @@
-<div class="sidebar close">
-  <div class="collapse-icon">
-    <i class="bi bi-chevron-double-left"></i>
-  </div>
-  <div class="logo-details">
-
-    <i class="bi bi-window"></i>
-    <span class="logo_name">MYHEALTHCOP</span>
-
-  </div>
-  <ul class="nav-links">
-    <li>
-      <a href="#">
-        <i class="bi bi-grid-fill"></i>
-        <span class="link_name">Dashboard</span>
-      </a>
-
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Users</a></li>
-      </ul>
-    </li>
-    <li>
-      <div class="icon-link">
-        <a href="#">
-          <i class="bi bi-collection"></i>
-          <span class="link_name">Users</span>
-        </a>
-        <i class="bi bi-chevron-right arrow"></i>
-      </div>
-      <ul class="sub-menu">
-        <li><a class="link_name" href="#">Category</a></li>
-        <li><a href="#">HTML & CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
-        <li><a href="#">PHP & MySQL</a></li>
-      </ul>
-    </li>
-    <li class="item">
-      <div class="icon-link">
-        <a href="#">
-          <i class="bi bi-book"></i>
-          <span class="link_name">Transactions</span>
-        </a>
-        <i class="bi bi-chevron-right arrow"></i>
-      </div>
-      <ul class="sub-menu">
-        <li><a class="link_name" href="#">Commissions</a></li>
-        <li><a href="#">Web Design</a></li>
-        <li><a href="#">Login Form</a></li>
-        <li><a href="#">Card Design</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="bi bi-grid-fill"></i>
-        <span class="link_name">Commissions</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Analytics</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="bi bi-bar-chart"></i>
-        <span class="link_name">Bookings</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Chart</a></li>
-      </ul>
-    </li>
-    <li>
-      <div class="icon-link">
-        <a href="#">
-          <i class="bi bi-plug"></i>
-          <span class="link_name">Reviews</span>
-        </a>
-        <i class="bi bi-chevron-right arrow"></i>
-      </div>
-      <ul class="sub-menu">
-        <li><a class="link_name" href="#">Plugins</a></li>
-        <li><a href="#">UI Face</a></li>
-        <li><a href="#">Pigments</a></li>
-        <li><a href="#">Box Icons</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class='bi bi-compass'></i>
-        <span class="link_name">Reports</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Explore</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="bi bi-clock-history"></i>
-        <span class="link_name">Charts</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">History</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="bi bi-gear-wide-connected"></i>
-        <span class="link_name">Activities</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Setting</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">
-        <i class="bi bi-gear-wide-connected"></i>
-        <span class="link_name">Recipes</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Setting</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#">
-        <i class="bi bi-gear-wide-connected"></i>
-        <span class="link_name">Ingredients</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Setting</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <a href="#">
-        <i class="bi bi-gear-wide-connected"></i>
-        <span class="link_name">Uploads</span>
-      </a>
-      <ul class="sub-menu blank">
-        <li><a class="link_name" href="#">Setting</a></li>
-      </ul>
-    </li>
-
-    <li>
-      <div class="profile-details">
-        <div class="profile-content">
-          <img src="../assets/images/me.jpg" alt="profileImg">
-        </div>
-        <div class="name-job">
-          <div class="profile_name">Isaac Nyaabila</div>
-          <div class="job">Web Desginer & <br> Network Administrator</div>
-        </div>
-        <i class="bi bi-box-arrow-left"></i>
-      </div>
-    </li>
-  </ul>
+<div class="spinner-border text-warning" role="status" *ngIf="loader">
+  <span class="sr-only">Loading...</span>
 </div>
 
-<section class="home-section">
-
-  <div class="container">
-
-    <p class="dash">
-
-      <span class="text">Dashboard</span>
-
-      <a href="#" class="create_report">Create Report</a>
-    </p>
-
-    <div class="row">
-
-      <div class="card top-card">
-
-        <tr>
-          <td></td>
-          <td colspan="3">Customers</td>
-        </tr>
-
-        <tr>
-          <td rowspan="3"><img src="../assets/images/users.svg" class="user" alt="profileImg"></td>
-          <td colspan="2">
-            <span class="precedent">1.2M</span>
-            <span class="percentage">+83.2%</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">Since last week</td>
-        </tr>
-
-      </div>
-
-      <div class="card top-card">
-        <tr>
-          <td></td>
-          <td colspan="2">Corperative Users</td>
-        </tr>
-
-        <tr >
-          <td rowspan="3"><img src="../assets/images/bank.png" class="bank" alt="profileImg"></td>
-          <td colspan="2">
-            <span class="precedent">800K</span>
-            <span class="percentage">+12.4%</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">Since last week</td>
-        </tr>
-
-      </div>
-
-      <div class="card top-card">
-        <tr>
-          <td></td>
-          <td colspan="2">Professionals</td>
-        </tr>
-
-        <tr>
-          <td rowspan="3"><img src="../assets/images/medal.svg" class="medal" alt="profileImg"></td>
-          <td colspan="2">
-            <span class="precedent">4K</span>
-            <span class="percentage">+3.5%</span>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2" class="last_week">Since last week</td>
-        </tr>
-
-      </div>
-
-      <div class="card top-card">
-        <table>
-          <tr>
-            <th class="Corporative" colspan="4">Next Corporative Event</th>
-          </tr>
-
-          <tr>
-            <td>02</td>
-            <td class="mnth">03</td>
-            <td class="mnt">21</td>
-            <td>23</td>
-          </tr>
-
-          <tr class="mnth">
-            <td>Months</td>
-            <td class="mnth">Weeks</td>
-            <td class="mnt">Days</td>
-            <td>Hours</td>
-          </tr>
-        </table>
-
-      </div>
+<div *ngIf="!loader">
+  <div class="sidebar close">
+    <div class="collapse-icon">
+      <i class="bi bi-chevron-double-left"></i>
     </div>
-
-    <app-first-c></app-first-c><br><br>
-
-    <app-second-c></app-second-c>
-
-    <app-third-c></app-third-c>
-
-    <app-fourth-c></app-fourth-c>
-
-
-
-
-    <app-fifth-c></app-fifth-c>
-
-    <app-sixth-c></app-sixth-c>
-
-    <app-seventh-c></app-seventh-c>
-    <app-eighth-c></app-eighth-c>
-
+    <div class="logo-details">
+  
+      <i class="bi bi-window"></i>
+      <span class="logo_name">MYHEALTHCOP</span>
+  
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="#">
+          <i class="bi bi-grid-fill"></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+  
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Users</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <i class="bi bi-collection"></i>
+            <span class="link_name">Users</span>
+          </a>
+          <i class="bi bi-chevron-right arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Category</a></li>
+          <li><a href="#">HTML & CSS</a></li>
+          <li><a href="#">JavaScript</a></li>
+          <li><a href="#">PHP & MySQL</a></li>
+        </ul>
+      </li>
+      <li class="item">
+        <div class="icon-link">
+          <a href="#">
+            <i class="bi bi-book"></i>
+            <span class="link_name">Transactions</span>
+          </a>
+          <i class="bi bi-chevron-right arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Commissions</a></li>
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Login Form</a></li>
+          <li><a href="#">Card Design</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi bi-grid-fill"></i>
+          <span class="link_name">Commissions</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Analytics</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi bi-bar-chart"></i>
+          <span class="link_name">Bookings</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Chart</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="icon-link">
+          <a href="#">
+            <i class="bi bi-plug"></i>
+            <span class="link_name">Reviews</span>
+          </a>
+          <i class="bi bi-chevron-right arrow"></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Plugins</a></li>
+          <li><a href="#">UI Face</a></li>
+          <li><a href="#">Pigments</a></li>
+          <li><a href="#">Box Icons</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bi bi-compass'></i>
+          <span class="link_name">Reports</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Explore</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi bi-clock-history"></i>
+          <span class="link_name">Charts</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi bi-gear-wide-connected"></i>
+          <span class="link_name">Activities</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class="bi bi-gear-wide-connected"></i>
+          <span class="link_name">Recipes</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="#">
+          <i class="bi bi-gear-wide-connected"></i>
+          <span class="link_name">Ingredients</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+  
+      <li>
+        <a href="#">
+          <i class="bi bi-gear-wide-connected"></i>
+          <span class="link_name">Uploads</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+  
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="../assets/images/me.jpg" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Isaac Nyaabila</div>
+            <div class="job">Web Desginer & <br> Network Administrator</div>
+          </div>
+          <i class="bi bi-box-arrow-left"></i>
+        </div>
+      </li>
+    </ul>
   </div>
-
-</section>
+  
+  <section class="home-section">
+  
+    <div class="container-fluid">
+  
+      <p class="dash">
+  
+        <span class="text">Dashboard</span>
+  
+        <a href="#" class="create_report">Create Report</a>
+      </p>
+  
+      <div class="row">
+  
+        <div class="card top-card">
+  <table>
+    <tr>
+      <td></td>
+      <td colspan="3">Customers</td>
+    </tr>
+  
+    <tr>
+      <td rowspan="3"><img src="../assets/images/users.svg" class="user topCardImage" alt="profileImg"></td>
+      <td colspan="2">
+        <span class="precedent">1.2M</span>
+        <span class="percentage">+83.2%</span>
+      </td>
+    </tr>
+  
+    <tr>
+      <td colspan="2">Since last week</td>
+    </tr>
+  </table>
+        </div>
+  
+        <div class="card top-card">
+          <table>
+            <tr>
+              <td></td>
+              <td colspan="2">Corperative Users</td>
+            </tr>
+    
+            <tr >
+              <td rowspan="3"><img src="../assets/images/bank.png" class="bank topCardImage" alt="profileImg"></td>
+              <td colspan="2">
+                <span class="precedent">800K</span>
+                <span class="percentage">+12.4%</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td colspan="2">Since last week</td>
+            </tr>
+          </table>
+        </div>
+  
+        <div class="card top-card">
+          <table>
+            <tr>
+              <td></td>
+              <td colspan="2">Professionals</td>
+            </tr>
+    
+            <tr>
+              <td rowspan="3"><img src="../assets/images/medal.svg" class="medal topCardImage" alt="profileImg"></td>
+              <td colspan="2">
+                <span class="precedent">4K</span>
+                <span class="percentage">+3.5%</span>
+              </td>
+            </tr>
+    
+            <tr>
+              <td colspan="2" class="last_week">Since last week</td>
+            </tr>
+          </table>
+        </div>
+  
+        <div class="card top-card lastCard">
+          <table>
+            <tr>
+              <th class="Corporative" colspan="4">Next Corporative Event</th>
+            </tr>
+  
+            <tr>
+              <td>02</td>
+              <td class="mnth">03</td>
+              <td class="mnt">21</td>
+              <td>23</td>
+            </tr>
+  
+            <tr class="mnth">
+              <td>Months</td>
+              <td class="mnth">Weeks</td>
+              <td class="mnt">Days</td>
+              <td>Hours</td>
+            </tr>
+          </table>
+  
+        </div>
+      </div>
+  
+      <app-first-c></app-first-c><br><br>
+  
+      <app-second-c></app-second-c>
+  
+      <app-third-c></app-third-c>
+  
+      <app-fourth-c></app-fourth-c>
+  
+  
+  
+  
+      <app-fifth-c></app-fifth-c>
+  
+      <app-sixth-c></app-sixth-c>
+  
+      <app-seventh-c></app-seventh-c>
+      <app-eighth-c></app-eighth-c>
+  
+    </div>
+  
+  </section>
+</div>

@@ -13,6 +13,8 @@ import { Component, OnInit,ViewChild } from '@angular/core';
 export class AppComponent{
   title = 'MYHEALTHCOP';
 
+  loader=true
+
   ngOnInit(){
     let arrow = document.querySelectorAll(".arrow");
     let sidebar = document.querySelector(".sidebar");
@@ -28,6 +30,10 @@ export class AppComponent{
        sidebarBtn!.addEventListener("click", ()=>{
        sidebar!.classList.toggle("close");
     });
+
+    setTimeout(()=>{
+this.loader=false
+    },3000);
   }
 
 }
