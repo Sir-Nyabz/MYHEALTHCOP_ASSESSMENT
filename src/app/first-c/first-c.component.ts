@@ -30,7 +30,8 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
       chart1.data = [
         {
           country: 'Active',
-          litres: 800000
+          litres: 800000,
+          label: "Ashanti Region"
         },
         {
           country: 'Pending',
@@ -59,63 +60,63 @@ export class FIRSTCComponent implements OnInit,AfterViewInit {
       pieSeries.dataFields.value = 'litres';
       pieSeries.dataFields.category = 'country';
       pieSeries.ticks.template.disabled = false;
-  pieSeries.alignLabels = false;
-  pieSeries.labels.template.text = "";
-  pieSeries.labels.template.radius = am4core.percent(-40);
-  pieSeries.labels.template.fill = am4core.color("white");
-  
-  chart1.legend = new am4charts.Legend();
-  chart1.legend.position = "right";
+      pieSeries.alignLabels = false;
+      pieSeries.labels.template.text = "";
+      pieSeries.labels.template.radius = am4core.percent(-40);
+      pieSeries.labels.template.fill = am4core.color("white");
+      
+      chart1.legend = new am4charts.Legend();
+      chart1.legend.position = "right";
 
 
-    //GHANA MAP
-    const chart = am4core.create('chartdiv1b', am4maps.MapChart);
+      //GHANA MAP
+      const chart = am4core.create('chartdiv1b', am4maps.MapChart);
 
-    // Set map definition
-    chart.geodata = am4geodata_ghanaLow;
+      // Set map definition
+      chart.geodata = am4geodata_ghanaLow;
 
-    // Set projection
-    chart.projection = new am4maps.projections.Miller();
+      // Set projection
+      chart.projection = new am4maps.projections.Miller();
 
-   
+    
 
-    // Create map polygon series
-    const polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+      // Create map polygon series
+      const polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 
-    // Exclude Antarctica
-    polygonSeries.exclude = ['AQ'];
+      // Exclude Antarctica
+      polygonSeries.exclude = ['AQ'];
 
-    // Make map load polygon (like country names) data from GeoJSON
-    polygonSeries.useGeodata = true;
+      // Make map load polygon (like country names) data from GeoJSON
+      polygonSeries.useGeodata = true;
 
 
 
-    // Configure series
-    const polygonTemplate = polygonSeries.mapPolygons.template;
-    polygonTemplate.tooltipText = '{name}: {value}';
-    polygonTemplate.propertyFields.id = "{name}:{id}";
-    polygonTemplate.fill = am4core.color('#19105e');
+      // Configure series
+      const polygonTemplate = polygonSeries.mapPolygons.template;
+      polygonTemplate.tooltipText = '{name}: {value}';
+      polygonTemplate.propertyFields.id = "{name}:{id}";
+      polygonTemplate.fill = am4core.color('#19105e');
 
-    // Create hover state and set alternative fill color
-    const hs = polygonTemplate.states.create('hover');
-    hs.properties.fill = am4core.color('#554d8c');
+      // Create hover state and set alternative fill color
+      const hs = polygonTemplate.states.create('hover');
+      hs.properties.fill = am4core.color('#554d8c');
 
-     //legend
-     chart.legend = new am4maps.Legend();
-     chart.legend.position = "left";
+      //legend
+      chart.legend = new am4maps.Legend();
+      chart.legend.position = "left";
 
-    // Default heat map, uses specified color to populate map
-    polygonSeries.heatRules.push({
-      "property": "fill",
-      "target": polygonSeries.mapPolygons.template,
-      "min": am4core.color("#e5e6f6"),
-      "max": am4core.color("#080c64"),
-      "logarithmic": true
-    });
+      // Default heat map, uses specified color to populate map
+      polygonSeries.heatRules.push({
+        "property": "fill",
+        "target": polygonSeries.mapPolygons.template,
+        "min": am4core.color("#e5e6f6"),
+        "max": am4core.color("#080c64"),
+        "logarithmic": true
+      });
 
-    polygonSeries.data = gahanaMapData;
+      polygonSeries.data = gahanaMapData;
 
-    polygonTemplate.propertyFields.fill = "fill";
+      polygonTemplate.propertyFields.fill = "fill";
   }
 
 }

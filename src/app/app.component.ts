@@ -16,6 +16,10 @@ export class AppComponent{
   loader=true
 
   ngOnInit(){
+    setTimeout(()=>{
+      this.loader=false
+          },3000);
+          
     let arrow = document.querySelectorAll(".arrow");
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn= document.querySelector(".collapse-icon");
@@ -31,9 +35,7 @@ export class AppComponent{
        sidebar!.classList.toggle("close");
     });
 
-    setTimeout(()=>{
-this.loader=false
-    },3000);
+    
   }
 
 }
