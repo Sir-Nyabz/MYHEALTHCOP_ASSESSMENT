@@ -22,7 +22,7 @@ export class AppComponent{
           
     let arrow = document.querySelectorAll(".arrow");
     let sidebar = document.querySelector(".sidebar");
-    let sidebarBtn= document.querySelector(".collapse-icon");
+    let sidebarBtn= document.querySelector(".bi-list");
     for (var i = 0; i < arrow.length; i++) {
       arrow[i].addEventListener("click", (e:any)=>{
      let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
