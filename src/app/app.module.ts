@@ -13,6 +13,8 @@ import { FIFTHCComponent } from './fifth-c/fifth-c.component';
 import { SIXTHCComponent } from './sixth-c/sixth-c.component';
 import { SEVENTHCComponent } from './seventh-c/seventh-c.component';
 import { EIGHTHCComponent } from './eighth-c/eighth-c.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { EIGHTHCComponent } from './eighth-c/eighth-c.component';
     FIFTHCComponent,
     SIXTHCComponent,
     SEVENTHCComponent,
-    EIGHTHCComponent
+    EIGHTHCComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule, NgApexchartsModule,

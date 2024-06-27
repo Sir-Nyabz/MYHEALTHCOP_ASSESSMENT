@@ -1,18 +1,19 @@
 .card{
     display: inline-block;
     margin: 0% 1% 0px 0px;
+    height: 20%;
 }
 
 .chart1a{
     width: 69%;
-    height:450px;
+    height:492px;
     padding-top: 20px;
 }
 
 .chart1b{
     width: 29%;
     float: right;
-    height: 450px;
+    /* height: 450px; */
     padding-top: 20px;
 }
 
