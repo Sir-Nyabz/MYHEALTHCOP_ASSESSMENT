@@ -106,3 +106,33 @@ img.bank {
 .last_week {
   text-align: left;
 }
+
+#sidebar {
+  width: 250px;
+  position: fixed;
+  height: 100%;
+}
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding-left: 250px;
+}
+
+#menu-toggle {
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    width: 100%;
+  }
+  
+  #page-content-wrapper {
+    padding-left: 0;
+  }
+}
+
+.toggled {
+  margin-left: -250px;
+}
